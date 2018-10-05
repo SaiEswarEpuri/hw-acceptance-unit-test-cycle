@@ -62,11 +62,9 @@ class MoviesController < ApplicationController
   end
   
   def samedirector 
-    @movie =Movie.find(params[:id])
-    if(@movie.director)
-      @movies=Movie.same_director(@movie.director)
-   else
-        flash[:notice] = "No director info found for movie #{@movie.title}"
+     @movies=Movie.same_director(params[:title])
+    if(@movies==nil)
+        flash[:notice] = "No director info found for movie #{params[:title]}"
         redirect_to movies_path
     end 
   end 

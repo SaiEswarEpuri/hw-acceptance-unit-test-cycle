@@ -12,6 +12,7 @@ group :development, :test do
   gem 'database_cleaner', '1.4.1'
   gem 'capybara', '2.4.4'
   gem 'launchy'
+  gem 'factory_girl_rails'
   gem 'rspec-rails', '3.7.2'
   gem 'ZenTest', '4.11.0'
 end
@@ -40,3 +41,5 @@ gem 'haml'
 
 # Deploy with Capistrano
 # gem 'capistrano'
+
+gem 'simplecov', :require => false
